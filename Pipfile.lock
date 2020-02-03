@@ -1,0 +1,73 @@
+{
+    "_meta": {
+        "hash": {
+            "sha256": "7d57f5dd457bb9b1aed7d31f67ea71b1dafa58cc356e80f6f16f2dcc7d3216a3"
+        },
+        "pipfile-spec": 6,
+        "requires": {
+            "python_version": "3.8"
+        },
+        "sources": [
+            {
+                "name": "pypi",
+                "url": "https://pypi.org/simple",
+                "verify_ssl": true
+            }
+        ]
+    },
+    "default": {
+        "adafruit-blinka": {
+            "hashes": [
+                "sha256:8d1ad2684b9a37adac10d6e22cc07ad29395d31043ba06319780b8491bffbd2a"
+            ],
+            "version": "==3.8.0"
+        },
+        "adafruit-circuitpython-lis3dh": {
+            "hashes": [
+                "sha256:830ec87fcb2b5068dd37e85b7814f3845a7f50718ef3e37a7483282afb15b591"
+            ],
+            "index": "pypi",
+            "version": "==5.0.2"
+        },
+        "adafruit-platformdetect": {
+            "hashes": [
+                "sha256:382e462bb31f615b1a51c20b9ab734221dd693cc52634edafa505a07694be197"
+            ],
+            "version": "==2.1.0"
+        },
+        "adafruit-pureio": {
+            "hashes": [
+                "sha256:b67587ed3c4dc90bd0e9b988587efa66b4466abf71eb0dcbcd4695e7e4350326"
+            ],
+            "version": "==1.0.4"
+        },
+        "pyftdi": {
+            "hashes": [
+                "sha256:72436911f1f5da15869027401ef666e9b0c8f051e4ba8cd32377b0757016ebae"
+            ],
+            "version": "==0.42.2"
+        },
+        "pyserial": {
+            "hashes": [
+                "sha256:6e2d401fdee0eab996cf734e67773a0143b932772ca8b42451440cfed942c627",
+                "sha256:e0770fadba80c31013896c7e6ef703f72e7834965954a78e71a3049488d4d7d8"
+            ],
+            "version": "==3.4"
+        },
+        "pyusb": {
+            "hashes": [
+                "sha256:4e9b72cc4a4205ca64fbf1f3fff39a335512166c151ad103e55c8223ac147362"
+            ],
+            "version": "==1.0.2"
+        },
+        "sysv-ipc": {
+            "hashes": [
+                "sha256:2b2b8491764845d06a9d5731ebe67f12fbe0c35967ac7f2bbe55ff24cb302405",
+                "sha256:8eff10dd17789ddf21b422ce46ae0f6420088902a88e4296cb805cf2fde8b4dc",
+                "sha256:a67fc5b7a3dd5fc9c50776de0c65a44eb776d29bb88364dedb1fb1149e53a1f1"
+            ],
+            "version": "==1.0.1"
+        }
+    },
+    "develop": {}
+}
