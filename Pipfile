@@ -9,6 +9,8 @@ pylint = "*"
 [packages]
 adafruit-circuitpython-lis3dh = "*"
 adafruit-circuitpython-busdevice = "*"
+matplotlib = "*"
+requests = "*"
 
 [requires]
 python_version = "3.7"
