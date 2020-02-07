@@ -2,6 +2,7 @@ import time
 import csv
 import os
 import multiprocessing as mp
+import socket
 import socketserver
 import http.server
 from functools import partial
@@ -14,11 +15,17 @@ import adafruit_lis3dh
 PORT = 8080
 DIRECTORY = 'data'
 
+def get_ip_address():
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    s.connect(('1.1.1.1', 80))
+    return s.getsockname()[0]
+
 def serve_files():
+    # python3 -m http.server 8080 --directory data
     Handler = partial(http.server.SimpleHTTPRequestHandler, directory=DIRECTORY)
 
     with socketserver.TCPServer(('0.0.0.0', PORT), Handler) as httpd:
-        print("serving at port", PORT)
+        print("Serving HTTP on 0.0.0.0 port {port} (http://{ip}:{port}/) ...".format(port=PORT, ip=get_ip_address()))
         httpd.serve_forever()
 
 def write_data():
@@ -47,8 +54,7 @@ if __name__ == '__main__':
     mp.set_start_method('spawn')
     p = mp.Process(target=serve_files)
     p.start()
-    p.join()
 
     write_data()
 
-# python3 -m http.server 8080 --directory data
+    p.join()
