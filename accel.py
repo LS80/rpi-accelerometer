@@ -26,7 +26,10 @@ def serve_files():
 
     with socketserver.TCPServer(('0.0.0.0', PORT), Handler) as httpd:
         print("Serving HTTP on 0.0.0.0 port {port} (http://{ip}:{port}/) ...".format(port=PORT, ip=get_ip_address()))
-        httpd.serve_forever()
+        try:
+            httpd.serve_forever()
+        except KeyboardInterrupt:
+            pass
 
 def write_data():
     spi = busio.SPI(board.SCK, board.MOSI, board.MISO)
